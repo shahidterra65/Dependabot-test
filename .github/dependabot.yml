@@ -1,15 +1,10 @@
----
-version: 2
+version: 2 
 updates:
+  # 🔄 Keep GitHub Actions dependencies  
   - package-ecosystem: "github-actions"
-    directory: "/"
+    directory: "/"  # Location of workflow file
     schedule:
-      interval: "weekly"
-  - package-ecosystem: npm
-    directory: "/javascript"
-    schedule:
-      interval: "weekly"
-  - package-ecosystem: bundler
-    directory: "/ruby"
-    schedule:
-      interval: "weekly"
+      interval: "weekly"  # Options: "daily", "weekly", 
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "actions"
